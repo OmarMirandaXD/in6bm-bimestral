@@ -1,44 +1,44 @@
-import jwt from "jsonwebtoken";
-import Admin from "./admin.model.js";
+import jwt from "jsonwebtoken"
+import User from "../usuarios/usuario.model.js"
 
 export const validarJWT = async (req, res, next) => {
     try {
-        let token = req.body.token || req.query.token || req.headers["authorization"];
+        let token = req.body.token || req.query.token || req.headers["authorization"]
 
         if (!token) {
             return res.status(400).json({
                 success: false,
-                message: "No hay token en la solicitud"
-            });
+                message: "There is no token in the request"
+            })
         }
 
-        token = token.replace(/^Bearer\s+/, "");
+        token = token.replace(/^Bearer\s+/, "")
 
-        const { uid } = jwt.verify(token, process.env.KEY);
+        const { uid } = jwt.verify(token, process.env.KEY)
 
-        const admin = await Admin.findById(uid);
+        const user = await User.findById(uid)
 
-        if (!admin) {
+        if (!user) {
             return res.status(400).json({
                 success: false,
-                message: "El administrador no existe en la base de datos"
-            });
+                message: "User does not exist in the DB"
+            })
         }
 
-        if (admin.status === false) {
+        if (user.status === false) {
             return res.status(400).json({
                 success: false,
-                message: "Administrador previamente desactivado"
-            });
+                message: "Previously deactivated user"
+            })
         }
 
-        req.admin = admin;
-        next();
+        req.usuario = user
+        next()
     } catch (err) {
         return res.status(500).json({
             success: false,
-            message: "Error al validar el token",
+            message: "Error validating token",
             error: err.message
-        });
+        })
     }
-};
+}
