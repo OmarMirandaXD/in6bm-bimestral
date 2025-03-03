@@ -9,6 +9,7 @@ import { fileURLToPath } from 'url';
 import { dbConnection } from "./mongo.js";
 import authRoutes from "../src/auth/auth.routes.js";
 import usuarioRoutes from "../src/usuarios/usuario.routes.js";
+import categoriasRoutes from "../src/categorias/categorias.routes.js"; 
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { createDefaultAdmin } from "./createAdmin.js";
 import dotenv from "dotenv";
@@ -41,6 +42,7 @@ const conectarDB = async () => {
 const routes = (app) => {
     app.use("/bimestral/v1/auth", authRoutes);
     app.use("/bimestral/v1/usuario", usuarioRoutes);
+    app.use("/bimestral/v1/categorias", categoriasRoutes);
 }
 
 export const initServer = async () => {
