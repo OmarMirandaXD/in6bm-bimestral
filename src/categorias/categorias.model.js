@@ -23,11 +23,4 @@ const categoriaSchema = new Schema({
     timestamps: true
 });
 
-categoriaSchema.statics.createDefaultCategory = async function() {
-    const defaultCategory = await this.findOne({ nombre: "General" });
-    if (!defaultCategory) {
-        await this.create({ nombre: "General", descripcion: "Categoría por defecto" });
-    }
-};
-
 export default model("Categoria", categoriaSchema);

@@ -17,7 +17,7 @@ export const createDefaultAdmin = async () => {
             await Usuario.create(adminData);
             console.log("Admin user created successfully");
         } else {
-            console.log("Admin user already exists");
+            console.log("El Admin predeterminado ya existe");
         }
     } catch (err) {
         console.error("Error creating admin user:", err);
