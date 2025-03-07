@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "67ca73c076eeedca91152570"
+  },
+  "nombre": "Perifericos",
+  "descripcion": "Producto economico",
+  "precio": 19.99,
+  "stock": 96,
+  "categoria": {
+    "$oid": "67ca72be76eeedca91152554"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T04:19:12.942Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T04:33:40.341Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca752f76eeedca91152592"
+  },
+  "nombre": "Monitor",
+  "descripcion": "Asus",
+  "precio": 325,
+  "stock": 5,
+  "categoria": {
+    "$oid": "67ca72be76eeedca91152554"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T04:25:19.303Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T04:33:40.341Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca754576eeedca91152597"
+  },
+  "nombre": "Bocinas",
+  "descripcion": "Xtech",
+  "precio": 25,
+  "stock": 100,
+  "categoria": {
+    "$oid": "67ca72be76eeedca91152554"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T04:25:41.089Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T04:33:40.341Z"
+  }
+}]

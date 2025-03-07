@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "67ca72be76eeedca91152550"
+  },
+  "name": "Admin",
+  "surname": "User",
+  "username": "admin",
+  "email": "admin@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Kbbn00ms8w8J7cxpxbXeWw$yF42fucEpASiMmm5N1kJhpOEFSR0dRi7AbBnbyJnfPY",
+  "phone": "12345678",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T04:14:54.618Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T04:14:54.618Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ca7cb6e91f47e5aca8e35a"
+  },
+  "name": "Juan Perez",
+  "surname": "Gomez",
+  "username": "juanperez",
+  "email": "juan.perez@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$OnqpqCudR0K8Z7hiZXaX6Q$a+X6iRhTVKigzXmvIsAwBWJ3XOY3YzPaqFbuAQe98xs",
+  "phone": "57156464",
+  "role": "CLIENTE_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T04:57:26.378Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T04:57:26.378Z"
+  }
+}]
