@@ -39,9 +39,10 @@ export const isAdmin = async (req, res, next) => {
             });
         }
 
-        req.usuario = user;
+        req.user = user; 
         next();
     } catch (err) {
+        console.error("Error al validar el token:", err); 
         return res.status(500).json({
             success: false,
             msg: "Error al validar el token",
