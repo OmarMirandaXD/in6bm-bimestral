@@ -22,3 +22,12 @@ export const getCartProductsValidator = [
     validarCampos,
     handleErrors
 ];
+
+export const completePurchaseValidator = [
+    body("metodoPago").isString().withMessage("El método de pago es requerido"),
+    body("numeroTarjeta").isCreditCard().withMessage("Número de tarjeta no válido"),
+    body("fechaVencimiento").matches(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/).withMessage("Fecha de vencimiento no válida"),
+    body("cvv").isLength({ min: 3, max: 4 }).withMessage("CVV no válido"),
+    validarCampos,
+    handleErrors
+];

@@ -1,6 +1,6 @@
 import { CarritoDeCompras } from './carrito-de-compras.model.js';
-import { Producto } from '../productos/productos.model.js';
 import { Compra } from '../CompraFinalizada/compra.model.js';
+import { validateCreditCard } from '../helpers/credit-cart-validator.js'; 
 
 export const addProductToCart = async (req, res) => {
     try {
@@ -93,7 +93,7 @@ export const getCartProducts = async (req, res) => {
 
 export const completePurchase = async (req, res) => {
     try {
-        const { metodoPago } = req.body; 
+        const { metodoPago, numeroTarjeta, fechaVencimiento, cvv } = req.body; 
         const cart = await CarritoDeCompras.findOne().populate('productos.producto');
 
         if (!cart) {
@@ -103,12 +103,12 @@ export const completePurchase = async (req, res) => {
             });
         }
 
-        const pagoAceptado = true; 
-
-        if (!pagoAceptado) {
+        
+        const tarjetaValida = validateCreditCard(numeroTarjeta, fechaVencimiento, cvv);
+        if (!tarjetaValida) {
             return res.status(400).json({
                 success: false,
-                msg: 'Payment method not accepted'
+                msg: 'Invalid credit card details'
             });
         }
 
@@ -130,6 +130,9 @@ export const completePurchase = async (req, res) => {
             productos: cart.productos,
             total,
             metodoPago,
+            numeroTarjeta,
+            fechaVencimiento,
+            cvv,
             usuario: req.usuario ? req.usuario._id : null 
         });
         await newPurchase.save();

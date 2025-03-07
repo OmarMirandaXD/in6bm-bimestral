@@ -20,6 +20,18 @@ const CompraSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    numeroTarjeta: {
+        type: String,
+        required: true
+    },
+    fechaVencimiento: {
+        type: String,
+        required: true
+    },
+    cvv: {
+        type: String,
+        required: true
+    },
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Usuario',
