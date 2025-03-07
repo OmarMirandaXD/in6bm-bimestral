@@ -23,4 +23,3 @@ export const createDefaultAdmin = async () => {
         console.error("Error creating admin user:", err);
     }
 };
-

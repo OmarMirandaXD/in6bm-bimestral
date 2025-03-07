@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Juan Perez\",\r\n    \"surname\": \"Gomez\",\r\n    \"username\": \"juanperez\",\r\n    \"email\": \"juan.perez@example.com\",\r\n    \"password\": \"Password123!\",\r\n    \"phone\": \"57156464\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Maria Jose \",\r\n    \"surname\": \"Xocoy\",\r\n    \"username\": \"MariaJose\",\r\n    \"email\": \"Maria.xocoy1999@gmail.com\",\r\n    \"password\": \"Contraseña123#\",\r\n    \"phone\": \"54223885\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -47,7 +47,38 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"juan.perez@example.com\",\r\n    \"password\": \"Password123!\"\r\n}",
+							"raw": "{\r\n    \"email\": \"omar.xocoy2007@gmail.com\",\r\n    \"password\": \"Password123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/bimestral/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"bimestral",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"adminpassword\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -82,7 +113,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/bimestral/v1/usuario/findUser/67c5c8299d36a9c32e7a2a18",
+							"raw": "http://localhost:3001/bimestral/v1/usuario/findUser/67cafa01450cfa7a59287e4f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -93,7 +124,7 @@
 								"v1",
 								"usuario",
 								"findUser",
-								"67c5c8299d36a9c32e7a2a18"
+								"67cafa01450cfa7a59287e4f"
 							]
 						}
 					},
@@ -136,7 +167,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/bimestral/v1/usuario/updatePassword/67c5c8299d36a9c32e7a2a18",
+							"raw": "http://localhost:3001/bimestral/v1/usuario/updatePassword/67cafa01450cfa7a59287e4f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -147,7 +178,7 @@
 								"v1",
 								"usuario",
 								"updatePassword",
-								"67c5c8299d36a9c32e7a2a18"
+								"67cafa01450cfa7a59287e4f"
 							]
 						}
 					},
@@ -156,11 +187,21 @@
 				{
 					"name": "updateUser",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"NuevoNombre\",\r\n    \"surname\": \"NuevoApellido\",\r\n    \"username\": \"NuevoUsername\",\r\n    \"email\": \"nuevoemail@example.com\",\r\n    \"phone\": \"12345678\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Maria Jose\",\r\n    \"surname\": \"Xocoy Miranda\",\r\n    \"username\": \"Majooo\",\r\n    \"email\": \"Maria@.com\",\r\n    \"phone\": \"54223885\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -168,7 +209,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/bimestral/v1/usuario/updateUser/67c5c8299d36a9c32e7a2a18",
+							"raw": "http://localhost:3001/bimestral/v1/usuario/updateUser/67cafa01450cfa7a59287e4f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -179,7 +220,7 @@
 								"v1",
 								"usuario",
 								"updateUser",
-								"67c5c8299d36a9c32e7a2a18"
+								"67cafa01450cfa7a59287e4f"
 							]
 						}
 					},
@@ -188,8 +229,32 @@
 				{
 					"name": "deleteUser",
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/bimestral/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"bimestral",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
 					},
 					"response": []
 				}
@@ -206,7 +271,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M1ZGQ3YTRjZTQyYjZmYWIyMTRjZTIiLCJpYXQiOjE3NDEwMjE3MTUsImV4cCI6MTc0MTAyNTMxNX0.DUloass_rZYpcAzS6AoM7yykbjxw4tzmIaUQQPAKHZ0",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
 									"type": "string"
 								}
 							]
@@ -215,7 +280,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Tecnología\",\r\n    \"descripcion\": \"Categoría relacionada con tecnología\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Ropa\",\r\n    \"descripcion\": \"Categoría relacionada con Ropa\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -349,7 +414,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZjJmMTRjMjc3ODU5MzlhMDQyM2UiLCJpYXQiOjE3NDEyMjQ5MDQsImV4cCI6MTc0MTIyODUwNH0.56dfx0R2BS3e_HMzhuL6-bkHKC-p59VuR1o86udPQfY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
 									"type": "string"
 								}
 							]
@@ -358,7 +423,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Teclado\",\r\n    \"descripcion\": \"Teclado Mecanico\",\r\n    \"precio\": 15.00,\r\n    \"stock\": 100,\r\n    \"categoria\": \"67c8fbde526facf03deba6eb\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Mouse\",\r\n    \"descripcion\": \"Logitech\",\r\n    \"precio\": 75.00,\r\n    \"stock\": 1000,\r\n    \"categoria\": \"67cafb41450cfa7a59287e67\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -390,7 +455,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZjJmMTRjMjc3ODU5MzlhMDQyM2UiLCJpYXQiOjE3NDEyMjQ5MDQsImV4cCI6MTc0MTIyODUwNH0.56dfx0R2BS3e_HMzhuL6-bkHKC-p59VuR1o86udPQfY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
 									"type": "string"
 								}
 							]
@@ -399,7 +464,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Almohada\",\r\n    \"descripcion\": \"Producto economico\",\r\n    \"precio\": 19.99,\r\n    \"stock\": 100,\r\n    \"categoria\": \"67c8fbde526facf03deba6eb\"\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Teclado\",\r\n    \"descripcion\": \"Teclado de Membrana\",\r\n    \"precio\": 19.99,\r\n    \"stock\": 80,\r\n    \"categoria\": \"67cafb41450cfa7a59287e67\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -407,7 +472,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/bimestral/v1/productos/editProduct/67c8fc96526facf03deba6fe",
+							"raw": "http://localhost:3001/bimestral/v1/productos/editProduct/67cafc7b450cfa7a59287e82",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -418,7 +483,7 @@
 								"v1",
 								"productos",
 								"editProduct",
-								"67c8fc96526facf03deba6fe"
+								"67cafc7b450cfa7a59287e82"
 							]
 						}
 					},
@@ -432,7 +497,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZjJmMTRjMjc3ODU5MzlhMDQyM2UiLCJpYXQiOjE3NDEyMjQ5MDQsImV4cCI6MTc0MTIyODUwNH0.56dfx0R2BS3e_HMzhuL6-bkHKC-p59VuR1o86udPQfY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
 									"type": "string"
 								}
 							]
@@ -440,7 +505,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/bimestral/v1/productos/deleteProduct/67c8fe44526facf03deba708",
+							"raw": "http://localhost:3001/bimestral/v1/productos/deleteProduct/67cafcd8450cfa7a59287e95",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -451,7 +516,7 @@
 								"v1",
 								"productos",
 								"deleteProduct",
-								"67c8fe44526facf03deba708"
+								"67cafcd8450cfa7a59287e95"
 							]
 						}
 					},
@@ -483,7 +548,21 @@
 					"name": "topSelling",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/bimestral/v1/productos/topSelling",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"bimestral",
+								"v1",
+								"productos",
+								"topSelling"
+							]
+						}
 					},
 					"response": []
 				},
@@ -491,7 +570,27 @@
 					"name": "SearchByName",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/bimestral/v1/productos/searchByName?/name=Mouse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"bimestral",
+								"v1",
+								"productos",
+								"searchByName"
+							],
+							"query": [
+								{
+									"key": "/name",
+									"value": "Mouse"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -501,7 +600,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/bimestral/v1/productos/categoria/67c8fbde526facf03deba6eb",
+							"raw": "http://localhost:3001/bimestral/v1/productos/categoria/67cafb41450cfa7a59287e67",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -512,7 +611,7 @@
 								"v1",
 								"productos",
 								"categoria",
-								"67c8fbde526facf03deba6eb"
+								"67cafb41450cfa7a59287e67"
 							]
 						}
 					},
@@ -531,7 +630,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M4ZjJmMTRjMjc3ODU5MzlhMDQyM2UiLCJpYXQiOjE3NDEyMzY0NTQsImV4cCI6MTc0MTI0MDA1NH0.A007FnvdZj3zagTtnX8sZKlVAjXOqg3OzPiOnVVDUjE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
 									"type": "string"
 								}
 							]
@@ -540,7 +639,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productoId\": \"67c930248324d326673864bf\",\r\n    \"cantidad\": 2\r\n}",
+							"raw": "{\r\n    \"productoId\": \"67cafcb7450cfa7a59287e8d\",\r\n    \"cantidad\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -567,11 +666,21 @@
 				{
 					"name": "removeProduct",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productoId\": \"67c930248324d326673864bf\"\r\n}",
+							"raw": "{\r\n    \"productoId\": \"67cafc7b450cfa7a59287e82\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -598,6 +707,16 @@
 				{
 					"name": "getCartProducts",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -620,11 +739,21 @@
 				{
 					"name": "completePurchase",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"metodoPago\": \"Efectivo\"\r\n}",
+							"raw": "{\r\n  \"metodoPago\": \"tarjeta\",\r\n  \"numeroTarjeta\": \"4111111111111111\",\r\n  \"fechaVencimiento\": \"12/25\",\r\n  \"cvv\": \"123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -651,16 +780,66 @@
 				{
 					"name": "generatebill",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/bimestral/v1/carrito/generate-bill/67cb0205a442fa6179046a96",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"bimestral",
+								"v1",
+								"carrito",
+								"generate-bill",
+								"67cb0205a442fa6179046a96"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "bill-history",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhZjk5ZjQ1MGNmYTdhNTkyODdlNDUiLCJpYXQiOjE3NDEzNTU1MzAsImV4cCI6MTc0MTM1OTEzMH0.8NnU8YdAXLKi_2q_Jlc3FFYINMiSvbIWlBMeBkAdHsI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/bimestral/v1/carrito/bill-history/67caf99f450cfa7a59287e45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"bimestral",
+								"v1",
+								"carrito",
+								"bill-history",
+								"67caf99f450cfa7a59287e45"
+							]
+						}
 					},
 					"response": []
 				}

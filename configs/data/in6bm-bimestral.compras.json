@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "67cb0205a442fa6179046a96"
+  },
+  "productos": [
+    {
+      "producto": {
+        "$oid": "67cafc7b450cfa7a59287e82"
+      },
+      "cantidad": 1,
+      "_id": {
+        "$oid": "67cb014da442fa6179046a71"
+      }
+    },
+    {
+      "producto": {
+        "$oid": "67cafd0a450cfa7a59287e9a"
+      },
+      "cantidad": 1,
+      "_id": {
+        "$oid": "67cb016ca442fa6179046a7d"
+      }
+    },
+    {
+      "producto": {
+        "$oid": "67cafcb7450cfa7a59287e8d"
+      },
+      "cantidad": 2,
+      "_id": {
+        "$oid": "67cb0177a442fa6179046a84"
+      }
+    }
+  ],
+  "total": 594.99,
+  "metodoPago": "tarjeta",
+  "numeroTarjeta": "4111111111111111",
+  "fechaVencimiento": "12/25",
+  "cvv": "123",
+  "usuario": {
+    "$oid": "67caf99f450cfa7a59287e45"
+  },
+  "fechaCompra": {
+    "$date": "2025-03-07T14:26:13.360Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T14:26:13.361Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T14:26:13.361Z"
+  }
+}]

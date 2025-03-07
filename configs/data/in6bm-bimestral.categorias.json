@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "67caf99f450cfa7a59287e48"
+  },
+  "nombre": "Categoría Predeterminada",
+  "descripcion": "Esta es la categoría predeterminada",
+  "fechaCreacion": {
+    "$date": "2025-03-07T13:50:23.846Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T13:50:23.847Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:50:23.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cafb41450cfa7a59287e67"
+  },
+  "nombre": "Tecnología",
+  "descripcion": "Categoría relacionada con tecnología",
+  "fechaCreacion": {
+    "$date": "2025-03-07T13:57:21.218Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T13:57:21.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:57:21.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cafb55450cfa7a59287e6f"
+  },
+  "nombre": "VideoJuegos",
+  "descripcion": "Categoría relacionada con Video Juegos",
+  "fechaCreacion": {
+    "$date": "2025-03-07T13:57:41.606Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T13:57:41.606Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:57:41.606Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cafb5f450cfa7a59287e73"
+  },
+  "nombre": "Zapatos",
+  "descripcion": "Categoría relacionada con Zapatos",
+  "fechaCreacion": {
+    "$date": "2025-03-07T13:57:51.358Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T13:57:51.359Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:59:02.637Z"
+  },
+  "fechaActualizacion": {
+    "$date": "2025-03-07T13:59:02.637Z"
+  }
+}]

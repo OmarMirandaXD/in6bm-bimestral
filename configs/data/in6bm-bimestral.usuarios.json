@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "67caf99f450cfa7a59287e45"
+  },
+  "name": "Admin",
+  "surname": "User",
+  "username": "admin",
+  "email": "admin@example.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$zpmcSvHIzynipE9r/8qgZA$JtkuuSmOz3hKW+v9KVBFhGIzhWx08O7T0DNYSw4nmmA",
+  "phone": "12345678",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T13:50:23.836Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:50:23.836Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67caf9c7450cfa7a59287e4b"
+  },
+  "name": "Ludwin ",
+  "surname": "Xocoy",
+  "username": "omaridiota",
+  "email": "omar.xocoy2007@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ui6rxrAEKPdD/wPSnXFAuA$e4ofkOgtO12QAeP9oP5V2+dt4HbPGoCHrQ+x6LM1eBM",
+  "phone": "57156464",
+  "role": "CLIENTE_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T13:51:03.645Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:51:03.645Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cafa01450cfa7a59287e4f"
+  },
+  "name": "Maria Jose",
+  "surname": "Xocoy Miranda",
+  "username": "Majooo",
+  "email": "Maria@.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$SZ7uonPLe4eTI+wovYc+/Q$h5U40YtfvSV0JdFM+9bALI0JZSCCjd3vTawvBEYZpHw",
+  "phone": "54223885",
+  "role": "ADMIN_ROLE",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-07T13:52:01.792Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T13:54:08.775Z"
+  }
+}]

@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "67cafc7b450cfa7a59287e82"
+  },
+  "nombre": "Teclado",
+  "descripcion": "Teclado de Membrana",
+  "precio": 19.99,
+  "stock": 79,
+  "categoria": {
+    "$oid": "67cafb41450cfa7a59287e67"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T14:02:35.475Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T14:26:13.349Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cafcb7450cfa7a59287e8d"
+  },
+  "nombre": "Air Jordan 1",
+  "descripcion": "Nike",
+  "precio": 250,
+  "stock": 8,
+  "categoria": {
+    "$oid": "67cafb5f450cfa7a59287e73"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T14:03:35.323Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T14:26:13.355Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cafd0a450cfa7a59287e9a"
+  },
+  "nombre": "Mouse",
+  "descripcion": "Logitech",
+  "precio": 75,
+  "stock": 999,
+  "categoria": {
+    "$oid": "67cafb41450cfa7a59287e67"
+  },
+  "createdAt": {
+    "$date": "2025-03-07T14:04:58.472Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T14:26:13.352Z"
+  }
+}]
