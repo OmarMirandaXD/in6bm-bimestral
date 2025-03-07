@@ -11,7 +11,7 @@ import authRoutes from "../src/auth/auth.routes.js";
 import usuarioRoutes from "../src/usuarios/usuario.routes.js";
 import categoriasRoutes from "../src/categorias/categorias.routes.js"; 
 import productosRoutes from "../src/productos/productos.routes.js";
-import carritoDeComprasRoutes from "../src/carrito-de-compras/carrito-de-compras.routes.js"; // Importa las rutas del carrito de compras
+import carritoDeComprasRoutes from "../src/carrito-de-compras/carrito-de-compras.routes.js"; 
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { createDefaultAdmin } from "./createAdmin.js";
 import { createDefaultCategoria } from "./createCategoria.js"; 

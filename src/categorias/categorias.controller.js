@@ -1,4 +1,5 @@
 import Categoria from "./categorias.model.js";
+import { Producto } from "../productos/productos.model.js";
 
 export const createCategory = async (req, res) => {
     try {
@@ -68,11 +69,23 @@ export const deleteCategory = async (req, res) => {
             });
         }
 
+        const categoriaPredeterminada = await Categoria.findOne({ nombre: "Categoría Predeterminada" });
+
+        if (!categoriaPredeterminada) {
+            return res.status(500).json({
+                success: false,
+                msg: "Categoría predeterminada no encontrada"
+            });
+        }
+
+    
+        await Producto.updateMany({ categoria: id }, { categoria: categoriaPredeterminada._id });
+
         await Categoria.findByIdAndDelete(id);
 
         res.status(200).json({
             success: true,
-            msg: 'Categoría eliminada'
+            msg: 'Categoría eliminada y productos actualizados a la categoría predeterminada'
         });
     } catch (err) {
         res.status(500).json({

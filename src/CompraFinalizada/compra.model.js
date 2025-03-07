@@ -35,7 +35,11 @@ const CompraSchema = new mongoose.Schema({
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Usuario',
-        required: false
+        required: true
+    },
+    fechaCompra: {
+        type: Date,
+        default: Date.now
     }
 }, {
     versionKey: false,
