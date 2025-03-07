@@ -44,12 +44,8 @@ Cuando el proyecto se ejecuta por primera vez, se crean automáticamente los sig
 ```json
 {
   "name": "Admin",
-  "surname": "User",
-  "username": "admin",
   "email": "admin@example.com",
   "password": "adminpassword",
-  "phone": "12345678",
-  "role": "ADMIN_ROLE"
 }
 ```
 
@@ -62,7 +58,6 @@ Cuando el proyecto se ejecuta por primera vez, se crean automáticamente los sig
 ```json
 {
   "nombre": "Categoría Predeterminada",
-  "descripcion": "Esta es la categoría predeterminada"
 }
 ```
 
