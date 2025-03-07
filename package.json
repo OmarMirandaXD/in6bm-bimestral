@@ -5,37 +5,38 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node index.js",
-      "dev": "nodemon index.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "nodemon index.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/OmarMirandaXD/in6bm-bimestral.git"
+        "type": "git",
+        "url": "git+https://github.com/OmarMirandaXD/in6bm-bimestral.git"
     },
     "author": "Ludwin Omar Xocoy Miranda",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/OmarMirandaXD/in6bm-bimestral/issues"
+        "url": "https://github.com/OmarMirandaXD/in6bm-bimestral/issues"
     },
     "homepage": "https://github.com/OmarMirandaXD/in6bm-bimestral#readme",
     "dependencies": {
-      "argon2": "^0.41.1",
-      "express": "^4.21.2",
-      "mongoose": "^8.10.0",
-      "swagger-jsdoc": "^6.2.8",
-      "swagger-ui-express": "^5.0.1"
+        "argon2": "^0.41.1",
+        "express": "^4.21.2",
+        "fs": "^0.0.1-security",
+        "mongoose": "^8.10.0",
+        "pdfkit": "^0.16.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1"
     },
     "devDependencies": {
-      "compression": "^1.8.0",
-      "cors": "^2.8.5",
-      "dotenv": "^16.4.7",
-      "express-rate-limit": "^7.5.0",
-      "express-validator": "^7.2.1",
-      "helmet": "^8.0.0",
-      "jsonwebtoken": "^9.0.2",
-      "morgan": "^1.10.0",
-      "nodemon": "^3.1.9"
+        "compression": "^1.8.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express-rate-limit": "^7.5.0",
+        "express-validator": "^7.2.1",
+        "helmet": "^8.0.0",
+        "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.1.9"
     }
-  }
-  
+}
